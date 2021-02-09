@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>PHP cheat sheet </title>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            This PHP Cheatsheet
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li><b>PHP Boiletplate:</b> PHP Syntax
+                <pre class="language-html"><code>&lt;?php ?&gt; 
+                </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Variable declaration
+                <pre class="language-html"><code>
+                    $name = "Harry"; // Variable 1: 
+                    $income = 200;   // Variable 2: 
+                </code></pre>
+            </li>
+            <li><b>String function of PHP</b> Array
+                <pre class="language-js"><code>$friends = array("rohan", "shubham", "skillf", "Larry");
+            </code></pre>
+            </li>
+            <li><b>PHP Boilerplate:</b> String
+                <pre class="language-js"><code> <?php 
+
+                    $name = "Harry is a good boy";
+                    echo $name;
+                    echo "<br>";
+                    
+                    echo "The length of " . "my string is " . strlen($name);
+                    echo "<br>";
+                    echo str_word_count($name);
+                    echo "<br>";
+                    echo strrev($name);
+                    echo "<br>";
+                    echo strpos($name, "Harry");
+                    echo "<br>";
+                    echo str_replace("Harry", "Rohan", $name);
+                    echo "<br>";
+                    echo str_repeat($name, 4);
+                    echo "<br>";
+                    echo "<pre>";
+                    echo rtrim("    this is a good boy     ");
+                    echo "<br>";
+                    echo ltrim("    this is a good boy     ");
+                    echo "</pre>";
+
+                ?>
+                </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Operators
+                <pre class="language-js"><code>
+                ($a + $b) 
+                ($a - $b) 
+                ($a * $b) 
+                ($a / $b) 
+                ($a % $b) 
+                ($a ** $b)
+                $a *= 6;
+                $a /= 5;
+                $a %= 5;
+                x > y
+                $m && $n
+                $m or $n
+                $m || $n
+                !$m
+
+            </li> 
+            <li><b>PHP Boiletplate:</b> If Else statement
+                <pre class="language-js"><code> 
+        if ($age>18){
+        echo "You can drink water with chai and alcohol<br>";
+    }
+    
+    if($age>13){
+        echo "You can drink chai only with water. No alcohol for you<br>";
+    }
+    else{
+        echo "You can drink water only<br>";
+    }
+            </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Switch case statement
+                <pre class="language-js"><code>$age = 56;
+            switch($age){
+                case 12:
+                    echo "You are 12 years old <br>";
+            
+                    break;
+            
+                case 45:
+            
+                    echo "You are 45 years old <br>";
+            
+                    break;
+            
+                case 56:
+            
+                    echo "You are 56 years old boy <br>";
+            
+                    break;
+            
+                    default:
+            
+                    echo "Your age is weird <br>";
+            
+                    break;
+                                       
+                }</code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b>While loop in PHP
+                <pre class="language-js"><code> 
+                $i = 0; 
+                while($i<5){
+                    echo "The value of i is ";
+                    echo $i+1;
+                    echo "<br>";
+                    $i+=1; 
+                    } 
+            </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> For loop for PHP
+                <pre class="language-js"><code>
+for ($index=1; $index < 6; $index++) { 
+    // for(initialization;condition; updation)
+    echo "The number is $index <br>";
+}
+</code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Do while loop
+                <pre class="language-js"><code>
+$i = 0;
+do{
+    echo "$i <br>";
+    $i++;
+}while($i<5);
+                </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> For loop
+                <pre class="language-js"><code>
+    <?php
+echo "Welcome to the world of foreach loops <br>";
+$arr = array("Bananas", "Apples", "Harpic", "Bread", "Butter");
+
+// for ($i=0; $i < count($arr); $i++) { 
+//     echo $arr[$i];
+//     echo "<br>";
+// }
+
+// Better way to do this - foreach loops
+foreach ($arr as  $value) {
+    echo "$value <br>";
+    }
+    
+    ?>
+    
+</code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> function
+                <pre class="language-js"><code>function add_some_extra($string)
+                    {
+                        $string .= 'Add something.';
+                    }
+                    
+                    $str = 'I have added this';
+                    add_some_extra($str);
+                    
+                    echo $str;   
+                    // outputs ‘Add something. I have added this'
+                    </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Post Method
+                <pre class="language-js"><code>if ($_SERVER['REQUEST_METHOD'] == 'POST'){}
+                if(isset($_POST['submit'])){
+
+                    }
+                $firstname = $mysqli_real_escape_string($_POST['firstname']);
+                </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b>Timeout function
+                <pre class="language-js"><code>setTimeout(greet, 5000);</code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Set interval
+                <pre class="language-js"><code>setInterval(greet, 1000, "Harry", "Good Night"); </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Date functions
+                <pre class="language-js"><code>let yr = newDate.getFullYear();
+                    console.log("The year is ", yr);
+                    
+                    let dat = newDate.getDate();
+                    console.log("The date is ", dat);
+                    
+                    let month = newDate.getMonth();
+                    console.log("The month is ", month);
+                    
+                    let hours = newDate.getHours();
+                    console.log("The hours is ", hours);</code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Arrow function
+                <pre class="language-js"><code>function greet() {
+                    console.log('Good morning');
+               }
+           
+               greet();
+            
+               // Arrow function
+            let greet =  ()=> {
+            console.log('Good morning');
+               }
+            
+            let sum2 = (a, b) => a+b;
+            </code></pre>
+            </li>
+
+            <li><b>PHP Boiletplate:</b> Math function
+                <pre class="language-js"><code> Math.round(a)
+                    Math.ceil(5.8)
+                    Math.floor(5.8)
+                    Math.min(4,5, 6)
+                    Math.max(4,5, 6)
+                    let r = Math.random();
+                </code></pre>
+
+
+            </li>
+            <li><b>PHP Boiletplate:</b> Array
+                <pre class="language-js"><code> 
+$student= array("Maths"=>56, "Physics"=>70,  
+"Chemistry"=>94, "English"=>83,  
+"Computer"=>58);
+
+/* Loop through array using foreach */
+
+echo "Looping using foreach: \n"; 
+foreach ($student as $subject => $marks){ 
+    echo "Student got ".$marks." in ".$subject."\n"; 
+}
+                </code></pre>
+
+
+            </li>
+
+
+    <li><b>PHP Boiletplate:</b> Sql Connecting to the Database
+    <pre class="language-js">
+    <code> 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $db=""
+    
+    // Create a connection
+    $conn = mysqli_connect($servername, $username, $password,$db);
+    
+    // Die if connection was not successful
+    if (!$conn){
+        die("Sorry we failed to connect: ". mysqli_connect_error());
+    }
+    else{
+        echo "Connection was successful";
+    }    
+            
+    </code>
+
+
+    </pre>
+
+
+            </li>
+            <li><b>PHP Boiletplate:</b> PHP Include function
+                <pre class="language-js"><code>
+                &lt;?php include 'link.php';?&gt;
+            </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Sql Query Method
+                <pre class="language-js">
+<code> 
+$sql = "CREATE TABLE `phptrip` ( `sno` INT(6) NOT NULL AUTO_INCREMENT , `name` VARCHAR(12) NOT NULL , `dest` VARCHAR(6) NOT NULL , PRIMARY KEY (`sno`))";
+$result = mysqli_query($conn, $sql);
+
+// Check for the table creation success
+if($result){
+    echo "The table was created successfully!<br>";
+}
+else{
+    echo "The table was not created successfully because of this error ---> ". mysqli_error($conn);
+}       
+    </code></pre>
+            </li>
+            <li><b>PHP Boiletplate:</b> Insert into Method
+                <pre class="language-js">
+        <code> 
+        $sql = "INSERT INTO `phptrip` (`name`, `dest`) VALUES ('$name', '$destination')";
+        $result = mysqli_query($conn, $sql);          
+            </code></pre>
+            </li>
+
+            <li><b>PHP Boiletplate:</b> Retrieving nO of Rows
+                <pre class="language-js">
+    <code> 
+    $sql = "INSERT INTO `phptrip` (`name`, `dest`) VALUES ('$name', '$destination')";
+    $result = mysqli_query($conn, $sql);       
+    $num = mysqli_num_rows($result);
+    while($row = mysqli_fetch_assoc($result))
+    $aff = mysqli_affected_rows($conn);   
+</code>
+
+</pre>
+
+            </li>
+            <li><b>PHP Boiletplate:</b> SQL for special characters
+                <pre class="language-js">
+    <code> 
+  $username=mysqli_real_escape_string($con,$_POST['username']);
+
+</code>
+
+</pre>
+
+            </li>
+
+            <li><b>PHP Boiletplate:</b> Password encryption
+                <pre class="language-js">
+    <code> 
+  $pass=password_hash($password,PASSWORD_BCRYPT);
+</code>
+
+</pre>
+
+            </li>
+
+            <li><b>PHP Boiletplate:</b> For same page calling
+                <pre class="language-js">
+    <code> 
+  <?php>
+session_start()
+  ?>
+
+  &lt;form method="post" action="&lt;?php echo htmlentities($_SERVER["PHP_SELF"]);?&lt;"&gt;
+
+</code>
+
+</pre>
+
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
